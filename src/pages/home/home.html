@@ -21,9 +21,8 @@
    <ion-list-header>
      ionic bir orosbudur...
    </ion-list-header>
-   <ion-item >
-     BURADA BİRŞEY YOK
-     BELKİDE VARDIR :)
+   <ion-item *ngFor="let item of items" >
+     <h1>{{item.name}}</h1>
    </ion-item>
 
    

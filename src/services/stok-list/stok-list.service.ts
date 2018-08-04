@@ -1,6 +1,7 @@
 import { Injectable } from "../../../node_modules/@angular/core";
 import { AngularFireDatabase } from "../../../node_modules/angularfire2/database";
 import { Item } from "../../models/item/item.model";
+import firebase from "../../../node_modules/firebase";
 
 @Injectable()
 export class StokListService {
@@ -10,7 +11,6 @@ export class StokListService {
     
     constructor(private db: AngularFireDatabase ) {}
 
-   
     addItem(item: Item)
     {
         return this.stokListRef.push(item);
